@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>Rent House| property| Pant House</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    
+  <style>
+      /* @media screen and (min-width: 480px) {
+  .banner {
+    #navbar {width: 200px; float: left;}
+  #logo {margin-left: 216px;} */
+    .banner {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+          ),
+          url("bedroom.jpeg");
+        width: 100vw;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      position: sticky;
+      }
+      .logo {
+        background-image: url("land.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 10rem;
+        width: 15rem;
+        cursor: pointer;
+      }
+      .navbar {
+        position: sticky;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        /* padding: 30PX 0PX; */
+        position: relative;
+        left: 24rem; 
+        bottom: 8rem;
+        justify-content: end;
+        overflow: hidden;
+        right: 7rem;
+        flex-shrink:calc(100%+768px);
+      }
+
+      .navbar ul li {
+        /* text-decoration: none; */
+        padding: 0.3rem 1.2rem;
+        position: relative;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .navbar ul li::after {
+        content: "";
+        width: 0;
+        height: 15px;
+        background: #009688;
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        transition: 0.5s;
+        display: inline-block;
+      }
+      .navbar ul li:hover::after {
+        width: 100%;
+      }
+      .contents {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+      h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3rem;
+      }
+      p {
+        color: #fff;
+        text-align: center;
+        font-size: 2.3rem;
+        letter-spacing: 0.15rem;
+        font-family: sans-serif;
+        line-height: 2.5rem;
+      }
+      button {
+        width: 20rem;
+        padding: 1.5rem 0rem;
+        margin: 2rem 1rem;
+        background: transparent;
+        color: #fff;
+        border: solid 2px #009688;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      span {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 0;
+        border-radius: 2.5rem;
+        background: #009688;
+        overflow: hidden;
+        cursor: pointer;
+        left: 0;
+        bottom: 0;
+        transition: 0.5s;
+      }
+      button:hover span {
+        width: 100%;
+      }
+      button:hover {
+        border: none;
+      }
+      .interior {
+        background: url("interior/all.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 75%;
+        height: 90vh;
+        position: relative;
+        /* z-index: -9; */
+        border-radius: 3rem;
+        top: 6rem;
+        left: 2.7rem;
+        background-color: darkgrey;
+        margin: 2rem 3rem;
+        padding: 4rem;
+        box-shadow: 4rem 3rem lightgrey;
+      }
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        top: 20rem;
+      }
+      .photo-grid img {
+        width: 417px;
+        height: 236px;
+      }
+      .project {
+        width: 100vw;
+        height: 60vh;
+      }
+      .project-content {
+        width: 28%;
+        height: 60vh;
+        font-family: monospace;
+        color: #000;
+      }
+      .project-img {
+        width: 72%;
+        height: 60vh;
+      }
+      h3,
+      section {
+        color: black;
+        font-family: monospace;
+      }
+      h3 {
+        font-size: 3rem;
+        position: relative;
+        top: 22rem;
+        left: 2.4rem;
+        font-weight: bold;
+      }
+      section {
+        font-size: 2rem;
+        position: relative;
+        top: 24rem;
+        left: 2.4rem;
+        color: rgba(0, 0, 0, 0.45);
+      }
+      .project-img {
+        background: url("/interior/project.jpg");
+        width: 75%;
+        height: 60vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* position: relative; */
+        /* top: 3rem; */
+        /* left: 3rem; */
+        margin-left: 17rem;
+        margin-top: 5rem;
+      }
+      .footer{
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+      /* justify-content: space-between; */
+    background-color: darkgray;
+    position: relative;
+    top: 36rem;  
+    margin-top: 3rem;
+      }
+      .footer ul{
+        width: 45vw;
+        list-style: none;
+        position: relative;
+        top: 10rem;
+        text-align: center;
+      /* left: 20rem; */
+      margin-top: 0.4rem;
+      /* background: lightgray;   */
+      /* right: 1rem; */
+    }
+      .footer ul li{
+        position: relative;
+         right: 15rem; 
+         top: 9rem;
+      }
+.item{
+  font-weight: 900;
+  font-family: sans-serif;
+position: relative;
+top: 3rem;
+}
+
+.form{
+  position: relative;
+  top: 5rem;
+right: 3rem;
+}
+.add{
+  color:rgba(0,0,0,0.75);
+  font-size: 1.1rem;
+letter-spacing: -0.1rem;
+word-spacing: .5rem;
+line-height: 1.2rem;
+font-weight: 900;
+font-family:sans-serif;
+text-align: center;
+column-count: 2;
+/* margin-top: 1rem; */
+/* margin-left: 7rem; */
+position: relative;
+left: 17.5rem;
+top: 4rem;
+}
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="logo"></div>
+      <div class="navbar">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">BEDROOM</a></li>
+          <li><a href="#">DINING</a></li>
+          <li><a href="#">KITCHEN</a></li>
+          <li><a href="#">BACKYARD</a></li>
+        </ul>
+      </div>
+      <div class="contents">
+        <h1>Design Your House</h1>
+        <p>Find inspiration to furnish and decorate your home in 3D</p>
+        <button type="button"><span></span> Watch More</button>
+        <button type="button"><span></span> Subscribe</button>
+      </div>
+    </div>
+    <div class="interior"></div>
+    <div class="photo-grid">
+      <img src="interior/homebyme-homepage-gallery-1-720x405.jpeg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-2-1-720x405.png" alt="" />
+      <img src="interior/homebyme-homepage-gallery-3-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-4-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-5-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-6-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-7-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-8-720x405.jpg" alt="" />
+      <img src="interior/homebyme-homepage-gallery-9-720x405.jpg" alt="" />
+    </div>
+    <div class="project">
+      <div class="project-content">
+        <h3>Design your future home</h3>
+        <section>
+          Both easy and intuitive, HomeByMe allows you to create your floor
+          plans in 2D and furnish your home in 3D, while expressing your
+          decoration style.
+        </section>
+      </div>
+      <div class="project-img">
+        <!-- <img src="/interior/project.jpg" alt="">  -->
+      </div>
+    </div>
+    <div class="footer">
+      <div class="add">Street:  O#8,n#15, Vivekanadapuram 1st Street, West Mambalam
+    <br>    City:   Chennai
+        
+       <br> State/province/area:    Tamil Nadu
+        
+      <br>  Phone number  04424895789
+        
+       <br> Zip code  600033
+        
+       <br> Country calling code  +91
+       <br> Country  India</div>
+      <ul>
+        <li class="item">GET STARTED</li>
+        <li>Offers</li>
+        <li>Features</li>
+        <li>Tutorials</li>
+        <li>Support/FAQ</li>
+      </ul>
+      <ul>
+        <li class="item">RESOURCES</li>
+        <li>Inspiration</li>
+        <li>3D Home Design Guide</li>
+        <li>Magazine</li>
+        <li>Community Content</li>
+        <li>Mobile app</li>
+      </ul>
+      <ul>
+        <li class="item">HOMEBYME FOR</li>
+        <li>Interior designer</li>
+        <li>Enterprise</li>
+        <li>Ambassadors</li>
+        <li>Brands</li>
+        <li>DIYers</li>
+      </ul>
+      <div class="form">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">First name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Last name</label>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+      
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+          <label class="form-check-label" for="form2Example33">
+            Subscribe to our newsletter
+          </label>
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
